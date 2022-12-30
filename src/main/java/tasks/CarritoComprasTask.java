@@ -8,7 +8,9 @@ import net.serenitybdd.screenplay.Task;
 
 import static userinterfaces.CarritoCompras.*;
 
-public class CarritoCompras implements Task {
+public class CarritoComprasTask implements Task {
+
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -37,11 +39,11 @@ public class CarritoCompras implements Task {
                 Scroll.scrollTo(PRODUCTO_04),
                 Click.clickOn(PRODUCTO_04),
 
-                Scroll.scrollTo(CLOSEBUTTON),
-                Click.clickOn(CLOSEBUTTON)
+                Scroll.scrollTo(CARRITO),
+                Click.clickOn(CARRITO)
         );
     }
-    public static CarritoCompras carritoCompras(){
-        return new CarritoCompras();
+    public static CarritoComprasTask carritoCompras(){
+        return new CarritoComprasTask();
     }
 }
