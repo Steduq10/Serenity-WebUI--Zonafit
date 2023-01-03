@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/pedido.feature"},
-        glue = {"stepdefinitions.pedido"}
+        features = {"src/test/resources/features/pedidofallido.feature"},
+        glue = {"stepdefinitions.pedidofallido"}
 
 )
-public class PedidoRunner {
+public class PedidoFallidoRunner {
 }

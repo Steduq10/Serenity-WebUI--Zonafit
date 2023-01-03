@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
 import questions.PedidoQuestions;
 import setup.SetUp;
+import stepdefinitions.pedido.PedidoSteps;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static tasks.CarritoComprasTask.carritoCompras;
@@ -18,18 +19,44 @@ import static tasks.FillForm.fillForm;
 import static tasks.OpenLandingPage.openLandingPage;
 import static tasks.PedidoTask.pedidoTask;
 
-public class PedidoSteps extends SetUp {
+public class PedidoExitosoSteps extends SetUp {
+
     private static final Logger LOGGER = Logger.getLogger(PedidoSteps.class);
     private static final String ACTOR_NAME = "Steven";
     private static final Actor actor = new Actor(ACTOR_NAME);
     private DataTable dataTable;
 
-    @Dado("a que el usuario ya agrego productos al carrito de compras y diligencio el formulario de pago y envio")
-    public void aQueElUsuarioYaAgregoProductosAlCarritoDeComprasYDiligencioElFormularioDePagoYEnvio(DataTable userData) {
+    @Dado("a que el usuario esta en el menu principal de la pagina")
+    public void aQueElUsuarioEstaEnElMenuPrincipalDeLaPagina(DataTable userData) {
         try{
             actorSetupTheBrowser(ACTOR_NAME);
             theActorInTheSpotlight().wasAbleTo(openLandingPage());
 
+        }catch (Exception e){
+            LOGGER.error("Error en la ejecución del test: " + e.getMessage());
+            Assertions.fail("Error en la ejecución del test: " + e.getMessage());
+        }
+
+    }
+
+    @Cuando("va a la seccion de ofertas y agrega productos al carrito")
+    public void vaA_LaSeccionDeOfertasYAgregaProductosAlCarrito() {
+        try{
+            theActorInTheSpotlight().attemptsTo(
+                    carritoCompras()
+            );
+            LOGGER.info("El usuario agregó productos al carrito");
+        }catch (Exception e){
+            LOGGER.error("Error en la ejecución del test: " + e.getMessage());
+            Assertions.fail("Error en la ejecución del test: " + e.getMessage());
+        }
+
+
+    }
+
+    @Y("diligencia el formulario de pago y envio")
+    public void diligencioElFormularioDePagoYEnvio(DataTable userData) {
+        try{
             dataTable = userData;
             theActorInTheSpotlight().attemptsTo(
                     fillForm().usandoDocumento(userData.row(0).get(1))
@@ -43,26 +70,14 @@ public class PedidoSteps extends SetUp {
                             .usandoCelular(userData.row(8).get(1))
                             .yUsandoNotas(userData.row(9).get(1))
             );
-            LOGGER.info("El usuario agregó productos al carrito y diligenció el formulario correctamente");
-        }catch (Exception e){
-            LOGGER.error("Error en la ejecución del test: " + e.getMessage());
-            Assertions.fail("Error en la ejecución del test: " + e.getMessage());
-        }
 
-    }
-
-    @Cuando("ingresa a la zona de pedido completado")
-    public void ingresaALaZonaDePedidoCompletado() {
-        try{
+            LOGGER.info("El usuario diligenció el formulario correctamente");
             theActorInTheSpotlight().attemptsTo(
-                    carritoCompras()
-            );
+                    pedidoTask());
         }catch (Exception e){
             LOGGER.error("Error en la ejecución del test: " + e.getMessage());
             Assertions.fail("Error en la ejecución del test: " + e.getMessage());
         }
-
-
     }
 
     @Entonces("el usuario ve el detalle del pedido realizado de forma exitosa")
@@ -71,7 +86,6 @@ public class PedidoSteps extends SetUp {
             theActorInTheSpotlight().attemptsTo(
                     Ensure.that(PedidoQuestions.pedidoQuestions().answeredBy(actor)).isTrue()
             );
-
             LOGGER.info("El usuario ve el detalle del pedido realizado de forma exitosa");
         }catch (Exception e){
             LOGGER.error("Error en la ejecución del test: " + e.getMessage());
@@ -80,8 +94,5 @@ public class PedidoSteps extends SetUp {
 
     }
 
-    @Y("diligencio el formulario de pago y envio con un formato de email no valido")
-    public void diligencioElFormularioDePagoYEnvioConUnFormatoDeEmailNoValido() {
-    }
 
 }

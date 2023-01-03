@@ -27,7 +27,7 @@ public class SetUp {
         browser.manage().window().maximize();
     }
 
-    private void setUpLog4j2(){
+    protected void setUpLog4j2(){
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }
 
