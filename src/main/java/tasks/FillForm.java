@@ -1,13 +1,14 @@
 package tasks;
 
+import interactions.Click;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Clear;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.actions.*;
+import userinterfaces.DetallesPago;
 
 import static interactions.Click.clickOn;
 import static interactions.Scroll.scrollTo;
+import static userinterfaces.CarritoCompras.OFERTAS;
 import static userinterfaces.DetallesPago.*;
 
 public class FillForm implements Task {
@@ -73,9 +74,24 @@ public class FillForm implements Task {
         return this;
     }
 
+
+
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+
+                Scroll.to(OFERTAS),
+                //Click.clickOn(OFERTAS),
+                //Click.clickOn(OFERTAS),
+                DoubleClick.on(OFERTAS),
+
+                Scroll.to(PRODUCTO_01),
+                Click.clickOn(PRODUCTO_01),
+
+                Scroll.to(FINALIZAR),
+                Click.clickOn(FINALIZAR),
+
                 Scroll.to(DOCUMENTO),
                 Clear.field(DOCUMENTO),
                 Enter.theValue(documento).into(DOCUMENTO),
@@ -92,17 +108,30 @@ public class FillForm implements Task {
                 Clear.field(APELLIDO),
                 Enter.theValue(apellido).into(APELLIDO),
 
-                Scroll.to(DEPARTAMENTO),
+                Scroll.to(OPCIONDEPARTAMENTO),
+                MoveMouse.to(OPCIONDEPARTAMENTO).andThen(actions -> actions.click()),
+                //Click.clickOn(OPCIONDEPARTAMENTO),
+                //Click.clickOn(DEPARTAMENTO),
+                MoveMouse.to(DEPARTAMENTO).andThen(actions -> actions.click()),
                 Clear.field(DEPARTAMENTO),
                 Enter.theValue(departamento).into(DEPARTAMENTO),
+                //Click.clickOn(CORRECTODEPARTAMENTO),
+                MoveMouse.to(CORRECTODEPARTAMENTO).andThen(actions -> actions.click()),
 
-                Scroll.to(MUNICIPIO),
+
+                Scroll.to(OPCIONMUNICIPIO),
+                MoveMouse.to(OPCIONMUNICIPIO).andThen(actions -> actions.click()),
+                //Click.clickOn(OPCIONMUNICIPIO),
+               // Click.clickOn(MUNICIPIO),
+                MoveMouse.to(MUNICIPIO).andThen(actions -> actions.click()),
                 Clear.field(MUNICIPIO),
                 Enter.theValue(municipio).into(MUNICIPIO),
+                //Click.clickOn(CORRECTOMUNICIPIO),
+                MoveMouse.to(CORRECTOMUNICIPIO).andThen(actions -> actions.click()),
 
                 Scroll.to(DIRECCION1),
                 Clear.field(DIRECCION1),
-                Enter.theValue(direccion1).into(direccion1),
+                Enter.theValue(direccion1).into(DIRECCION1),
 
                 Scroll.to(DIRECCION2),
                 Clear.field(DIRECCION2),
@@ -116,8 +145,14 @@ public class FillForm implements Task {
                 Clear.field(NOTAS),
                 Enter.theValue(notas).into(NOTAS),
 
+                Scroll.to(PAGOBALOTO),
+                MoveMouse.to(PAGOBALOTO).andThen(actions -> actions.click()),
+
+                Scroll.to(TERMINOS),
+                MoveMouse.to(TERMINOS).andThen(actions -> actions.click()),
+
                 scrollTo(ORDEN),
-                clickOn(ORDEN)
+                MoveMouse.to(ORDEN).andThen(actions -> actions.click())
         );
     }
 

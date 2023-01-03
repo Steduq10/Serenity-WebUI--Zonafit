@@ -1,22 +1,32 @@
 package tasks;
 
 
+
 import interactions.Click;
 import interactions.Scroll;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.DoubleClick;
+import net.serenitybdd.screenplay.targets.Target;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import userinterfaces.CarritoCompras;
 
 import static userinterfaces.CarritoCompras.*;
 
 public class CarritoComprasTask implements Task {
 
 
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Scroll.scrollTo(OFERTAS),
-                Click.clickOn(OFERTAS),
-
+                //Click.clickOn(OFERTAS),
+               // Click.clickOn(OFERTAS),
+                DoubleClick.on(OFERTAS),
 
                 Scroll.scrollTo(PRODUCTO_01),
                 Click.clickOn(PRODUCTO_01),

@@ -15,6 +15,7 @@ public class SetUp {
     @Managed()
     protected WebDriver browser;
 
+
     protected void actorSetupTheBrowser(String actorName){
         setUpLog4j2();
         setupBrowser(browser);

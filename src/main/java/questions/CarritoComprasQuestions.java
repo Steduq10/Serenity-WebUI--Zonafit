@@ -41,9 +41,9 @@ public class CarritoComprasQuestions implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         return(
                 PRODUCTO_01_VALIDACION.resolveFor(actor).isPresent()
-                        &&PRODUCTO_02_VALIDACION.resolveFor(actor).isPresent()
-                        &&PRODUCTO_03_VALIDACION.resolveFor(actor).isPresent()
-                        &&PRODUCTO_04_VALIDACION.resolveFor(actor).isPresent()
+                        &&PRODUCTO_02_VALIDACION.resolveFor(actor).isVisible()
+                        &&PRODUCTO_03_VALIDACION.resolveFor(actor).isVisible()
+                        &&PRODUCTO_04_VALIDACION.resolveFor(actor).isVisible()
                 );
     }
 
