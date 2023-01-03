@@ -5,6 +5,7 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
 
+import net.serenitybdd.screenplay.ensure.Ensure;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.CoreMatchers;
 import questions.CarritoComprasQuestions;
@@ -57,6 +58,9 @@ public class CarritoComprasSteps extends SetUp {
 
                         )
                 );*/
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(CarritoComprasQuestions.carritoComprasQuestions().answeredBy(actor)).isTrue()
+        );
         System.out.println("Productos agregados al carrito correctamente");
     }
 

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="d750a2e750890c23e0ff08eb472696b700fa92baba04e091ba9278f741691029.html">Test Detalle Pedido  Zonafit.Co</a></span>
+                > <span class="truncate-60"><a
+                    href="dc0ec0db9f8da0cb57f828d9603b0b7113d20ffaece54a040ae8afb9606dc25c.html">Escenario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-01-2023 16:37</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Test Detalle Pedido  Zonafit.Co </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Escenario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado a que el usuario ya agrego productos al carrito de compras y diligencio el formulario de pago y envio<br><table class='embedded'><thead><th>documento</th><th>&lt;documento&gt;</th></thead><tbody><tr><td>email</td><td>&lt;email&gt;</td></tr><tr><td>nombre</td><td>&lt;nombre&gt;</td></tr><tr><td>apellido</td><td>&lt;apellido&gt;</td></tr><tr><td>departamento</td><td>&lt;departamento&gt;</td></tr><tr><td>municipio</td><td>&lt;municipio&gt;</td></tr><tr><td>direccion</td><td>&lt;direccion&gt;</td></tr><tr><td>complemento</td><td>&lt;complemento&gt;</td></tr><tr><td>celular</td><td>&lt;celular&gt;</td></tr><tr><td>notas</td><td>&lt;notas&gt;</td></tr></tbody></table><br>Cuando ingresa a la zona de pedido completado<br>Entonces el usuario ve el detalle del pedido realizado de forma exitosa</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" 1: escenario: : El detalle del pedido realizado se muestra de forma exitosa ({documento=1234567890, email=prueba@mail.com, nombre=Prueba, apellido=Serenity, departamento=Antioquia, municipio=Medellin - 050001, direccion=Cra 101 # 24-78, complemento=Castilla, celular=3004784358, notas=Zonabit.co es lo mejor})" width="1366"/>
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Dado a que el usuario ya agrego productos al carrito de compras y diligencio el formulario de pago y envio
+| documento | 1234567890 |
+| email | prueba@mail.com |
+| nombre | Prueba |
+| apellido | Serenity |
+| departamento | Antioquia |
+| municipio | Medellin - 050001 |
+| direccion | Cra 101 # 24-78 |
+| complemento | Castilla |
+| celular | 3004784358 |
+| notas | Zonabit.co es lo mejor |" width="1366"/>
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Steven open landing page" width="1366"/>
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Steven opens the Landing page" width="1366"/>
+                <img src="e3bb9f78bff3763f226c53d3b54345099e20df9704199a67e15d76f9b194ff35.png" title=" Steven opens the Landing page (completed)" width="1366"/>
+                <img src="e3bb9f78bff3763f226c53d3b54345099e20df9704199a67e15d76f9b194ff35.png" title=" Steven open landing page (completed)" width="1366"/>
+                <img src="5169415d86c3d9bf937b70043f19bf17d971706709646b6501408eda6beba04a.png" title=" Steven fill form" width="1366"/>
+                <img src="2ba6adc95e608da1bee723ed5f4f0765b777e6d26924f00475b0009b7b0031e7.png" title=" Steven clicks on OFERTAS" width="1366"/>
+                <img src="30c0881753fa3b1c3ec0e99e70e60e47471bd6fc224d396835faf08a149a3a17.png" title=" Steven clicks on OFERTAS (completed)" width="1366"/>
+                <img src="af79d94f98e1f4ad01765bb70b8c0c440658498b671ef9aaa7ad6fe5e5a75aa5.png" title=" Steven clears field N&Uacute;MERO DOCUMENTO" width="1366"/>
+                <img src="1c89f609b0926c7ab13d3d5aa5fcb3dc9fc3acb3d6c729d429a5e41a6bd2623a.png" title=" Steven clears field N&Uacute;MERO DOCUMENTO (completed)" width="1366"/>
+                <img src="1c89f609b0926c7ab13d3d5aa5fcb3dc9fc3acb3d6c729d429a5e41a6bd2623a.png" title=" Steven enters '1234567890' into N&Uacute;MERO DOCUMENTO" width="1366"/>
+                <img src="256257ba23b0218c7788f158db0009cf00434eef795f1f15d398322fdca04fee.png" title=" Steven enters '1234567890' into N&Uacute;MERO DOCUMENTO (completed)" width="1366"/>
+                <img src="20c17714ccf87e0901fb84408fc0e57a775329a87db14807a826f2ab7ffe1541.png" title=" Steven clears field EMAIL" width="1366"/>
+                <img src="e79c46e91383f2010dd84706258698001bc583d8ef02798bbd6f77a0fd28a72a.png" title=" Steven clears field EMAIL (completed)" width="1366"/>
+                <img src="e79c46e91383f2010dd84706258698001bc583d8ef02798bbd6f77a0fd28a72a.png" title=" Steven enters 'prueba@mail.com' into EMAIL" width="1366"/>
+                <img src="90b8e4b75d431e8fb7f78e08dcb8ce55049a40bfab74f4ad8f9670bc026ef22d.png" title=" Steven enters 'prueba@mail.com' into EMAIL (completed)" width="1366"/>
+                <img src="2ab58411be835052aa9d7bdd2d53e0f49ebce2e1e99ed03dded366cfd3818cdf.png" title=" Steven clears field NOMBRE" width="1366"/>
+                <img src="4c87731d4a163f19dfa22c27ce2d7c7407cd649f06a3298b3d67bcc39e48ab30.png" title=" Steven clears field NOMBRE (completed)" width="1366"/>
+                <img src="4c87731d4a163f19dfa22c27ce2d7c7407cd649f06a3298b3d67bcc39e48ab30.png" title=" Steven enters 'Prueba' into NOMBRE" width="1366"/>
+                <img src="3b37580fa9cd5ca4c36995d9d683613a5079984bb5d1bfc8616b4040fec5af7d.png" title=" Steven enters 'Prueba' into NOMBRE (completed)" width="1366"/>
+                <img src="3b37580fa9cd5ca4c36995d9d683613a5079984bb5d1bfc8616b4040fec5af7d.png" title=" Steven clears field APELLIDO" width="1366"/>
+                <img src="b1e68764cf1c93348be020ca5083a817d72681ed7b0ab46f51b002e064f94ee2.png" title=" Steven clears field APELLIDO (completed)" width="1366"/>
+                <img src="b1e68764cf1c93348be020ca5083a817d72681ed7b0ab46f51b002e064f94ee2.png" title=" Steven enters 'Serenity' into APELLIDO" width="1366"/>
+                <img src="e90b6bda36fb68dbdb8bb4a2bbff003c8906871a26e6274e83fc18b1de03ed32.png" title=" Steven enters 'Serenity' into APELLIDO (completed)" width="1366"/>
+                <img src="b9639d90799ddd8b1720c8bb21a3d05e9c39676a88f7ffab191d943a1b849c79.png" title=" Steven clears field DEPARTAMENTO" width="1366"/>
+                <img src="b9639d90799ddd8b1720c8bb21a3d05e9c39676a88f7ffab191d943a1b849c79.png" title=" Steven clears field DEPARTAMENTO (completed)" width="1366"/>
+                <img src="b9639d90799ddd8b1720c8bb21a3d05e9c39676a88f7ffab191d943a1b849c79.png" title=" Steven enters 'Antioquia' into DEPARTAMENTO" width="1366"/>
+                <img src="e8f0adf394778d015a3ca359caeff4559702ad23559b0c3f3a291466be28d2ab.png" title=" Steven enters 'Antioquia' into DEPARTAMENTO (completed)" width="1366"/>
+                <img src="141988e35fdb271970dd049b693f7a978aeaed5be3f430ace6dd06ac173326f9.png" title=" Steven clears field MUNICIPIO" width="1366"/>
+                <img src="141988e35fdb271970dd049b693f7a978aeaed5be3f430ace6dd06ac173326f9.png" title=" Steven clears field MUNICIPIO (completed)" width="1366"/>
+                <img src="141988e35fdb271970dd049b693f7a978aeaed5be3f430ace6dd06ac173326f9.png" title=" Steven enters 'Medellin - 050001' into MUNICIPIO" width="1366"/>
+                <img src="6cc26e4f141c0043b7e58c79f5d198f92a3f9d6cccbd1b37707fc9ee120fee0c.png" title=" Steven enters 'Medellin - 050001' into MUNICIPIO (completed)" width="1366"/>
+                <img src="51d165c92700316e99d382f53ca85c7698424b1633512ceb1a526464c7c88b72.png" title=" Steven clears field DIRECCION1" width="1366"/>
+                <img src="db73f348f02e67b825ab8711c48c5aac41617a2d4cc4aca5bcd8783e344598ee.png" title=" Steven clears field DIRECCION1 (completed)" width="1366"/>
+                <img src="db73f348f02e67b825ab8711c48c5aac41617a2d4cc4aca5bcd8783e344598ee.png" title=" Steven enters 'Cra 101 # 24-78' into DIRECCION1" width="1366"/>
+                <img src="7c04e79dbdf0feab6551b7f41a8f298beb7fff046a6f8fd0193765bb4a24e783.png" title=" Steven enters 'Cra 101 # 24-78' into DIRECCION1 (completed)" width="1366"/>
+                <img src="7c04e79dbdf0feab6551b7f41a8f298beb7fff046a6f8fd0193765bb4a24e783.png" title=" Steven clears field DIRECCION2" width="1366"/>
+                <img src="d6954979649f3ae3ef4f02e8ba85892b2732e308b5fd12b1b6036e2e9200f94c.png" title=" Steven clears field DIRECCION2 (completed)" width="1366"/>
+                <img src="d6954979649f3ae3ef4f02e8ba85892b2732e308b5fd12b1b6036e2e9200f94c.png" title=" Steven enters 'Castilla' into DIRECCION2" width="1366"/>
+                <img src="91ebbbd7a7ab824ab0f410da1cca98be6a9183ed13734636dd16274633307b01.png" title=" Steven enters 'Castilla' into DIRECCION2 (completed)" width="1366"/>
+                <img src="369962fec1df2f4ebb266a22aad6aced0190fcf57fb7c944cda01000fdd687ba.png" title=" Steven clears field CELULAR" width="1366"/>
+                <img src="13ba842a3002f7d6b15677fcd36e916739726b1ee2c49e259bc4cab38a540499.png" title=" Steven clears field CELULAR (completed)" width="1366"/>
+                <img src="13ba842a3002f7d6b15677fcd36e916739726b1ee2c49e259bc4cab38a540499.png" title=" Steven enters '3004784358' into CELULAR" width="1366"/>
+                <img src="abcd1fce1da5896720ec8f0ea37d5d180fee89e765b02752378049cc96ec97da.png" title=" Steven enters '3004784358' into CELULAR (completed)" width="1366"/>
+                <img src="ce38b861c7f61acea0c5d2634987b5719d07be01b05ce20a995165a51ae31336.png" title=" Steven clears field NOTAS" width="1366"/>
+                <img src="c40449b0a261b621b73bad9a69ea95c6a35ab65bb52570855f00948d8d64a32c.png" title=" Steven clears field NOTAS (completed)" width="1366"/>
+                <img src="c40449b0a261b621b73bad9a69ea95c6a35ab65bb52570855f00948d8d64a32c.png" title=" Steven enters 'Zonabit.co es lo mejor' into NOTAS" width="1366"/>
+                <img src="ea082969c9d157194b8b0b4d097be134c49dac1b995581d31b9af603bcaf4d82.png" title=" Steven enters 'Zonabit.co es lo mejor' into NOTAS (completed)" width="1366"/>
+                <img src="22971d3a9a1588d15ba712c519f9ef13a1b62dab98517bb2126094df951c101f.png" title=" Steven fill form (completed)" width="1366"/>
+                <img src="22971d3a9a1588d15ba712c519f9ef13a1b62dab98517bb2126094df951c101f.png" title=" Dado a que el usuario ya agrego productos al carrito de compras y diligencio el formulario de pago y envio
+| documento | 1234567890 |
+| email | prueba@mail.com |
+| nombre | Prueba |
+| apellido | Serenity |
+| departamento | Antioquia |
+| municipio | Medellin - 050001 |
+| direccion | Cra 101 # 24-78 |
+| complemento | Castilla |
+| celular | 3004784358 |
+| notas | Zonabit.co es lo mejor | (completed)" width="1366"/>
+                <img src="2d30d738f585f4a60988c80fa3b7d7b5941e1eed23006bfee410bf7f25689b46.png" title=" Cuando ingresa a la zona de pedido completado" width="1366"/>
+                <img src="2d30d738f585f4a60988c80fa3b7d7b5941e1eed23006bfee410bf7f25689b46.png" title=" Steven pedido task" width="1366"/>
+                <img src="05b5dfdbe7f59423fa55726ed37982ee58b9826a7f7df1cced644a8626ca00ed.png" title=" Steven pedido task (completed)" width="1366"/>
+                <img src="05b5dfdbe7f59423fa55726ed37982ee58b9826a7f7df1cced644a8626ca00ed.png" title=" Cuando ingresa a la zona de pedido completado (completed)" width="1366"/>
+                <img src="05b5dfdbe7f59423fa55726ed37982ee58b9826a7f7df1cced644a8626ca00ed.png" title=" Entonces el usuario ve el detalle del pedido realizado de forma exitosa" width="1366"/>
+                <img src="05b5dfdbe7f59423fa55726ed37982ee58b9826a7f7df1cced644a8626ca00ed.png" title=" Entonces el usuario ve el detalle del pedido realizado de forma exitosa (completed)" width="1366"/>
+                <img src="05b5dfdbe7f59423fa55726ed37982ee58b9826a7f7df1cced644a8626ca00ed.png" title=" 1: escenario: : El detalle del pedido realizado se muestra de forma exitosa ({documento=1234567890, email=prueba@mail.com, nombre=Prueba, apellido=Serenity, departamento=Antioquia, municipio=Medellin - 050001, direccion=Cra 101 # 24-78, complemento=Castilla, celular=3004784358, notas=Zonabit.co es lo mejor}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>

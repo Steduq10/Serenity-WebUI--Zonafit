@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-01-2023 15:33</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-01-2023 17:23</span>
     <br style="clear:left"/>
 </div>
 
@@ -189,9 +189,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">: Agregar productos al carrito de forma exitosa
+                                <span class="error-color">: Agregar productos al carrito de forma exitosa
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -208,6 +208,45 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such element exception: no such element: Unable to locate element: {'method':'xpath','selector':'//button[@title='Close (Esc)']'}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>interactions.Scroll.performAs(Scroll.java:19)<br />tasks.CarritoComprasTask.performAs(CarritoComprasTask.java:25)<br />stepdefinitions.carritocompras.CarritoComprasSteps.vaALaSeccionDeOfertasYAgregaProductosAlCarrito(CarritoComprasSteps.java:45)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource5446725200793696440.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Dado a que el usuario esta en el menu principal de la pagina" width="1366"/>
@@ -216,10 +255,11 @@
                 <img src="14897f81eff702a0065c2f4b4812fe34c20cc2e525c5105e8ff70f8949b464b7.png" title=" Steven opens the Landing page (completed)" width="1366"/>
                 <img src="14897f81eff702a0065c2f4b4812fe34c20cc2e525c5105e8ff70f8949b464b7.png" title=" Steven open landing page (completed)" width="1366"/>
                 <img src="14897f81eff702a0065c2f4b4812fe34c20cc2e525c5105e8ff70f8949b464b7.png" title=" Dado a que el usuario esta en el menu principal de la pagina (completed)" width="1366"/>
-                <img src="1fda048f1d7603b6f759678cbe363d2029df8e4890f46ddaa5c7065e3bdca411.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito" width="1366"/>
-                <img src="1fda048f1d7603b6f759678cbe363d2029df8e4890f46ddaa5c7065e3bdca411.png" title=" Steven carrito compras task" width="1366"/>
-                <img src="1fda048f1d7603b6f759678cbe363d2029df8e4890f46ddaa5c7065e3bdca411.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito (completed)" width="1366"/>
-                <img src="1fda048f1d7603b6f759678cbe363d2029df8e4890f46ddaa5c7065e3bdca411.png" title=" Entonces los productos son agregados correctamente al carrito: <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="14897f81eff702a0065c2f4b4812fe34c20cc2e525c5105e8ff70f8949b464b7.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito" width="1366"/>
+                <img src="2ba6adc95e608da1bee723ed5f4f0765b777e6d26924f00475b0009b7b0031e7.png" title=" Steven carrito compras task" width="1366"/>
+                <img src="2ba6adc95e608da1bee723ed5f4f0765b777e6d26924f00475b0009b7b0031e7.png" title=" Steven clicks on OFERTAS" width="1366"/>
+                <img src="30c0881753fa3b1c3ec0e99e70e60e47471bd6fc224d396835faf08a149a3a17.png" title=" Steven clicks on OFERTAS (completed)" width="1366"/>
+                <img src="029ea020d7aeaef6816290f8279a077bbc2fcee26587d3305bab135035364f1c.png" title=" Steven carrito compras task (completed): <span class='error-color'>ERROR</span>" width="1366"/>
             </div>
         </div>
 

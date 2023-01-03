@@ -1,13 +1,13 @@
 package stepdefinitions.fillform;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.eo.Se;
+
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import org.hamcrest.CoreMatchers;
 import setup.SetUp;
-import tasks.OpenLandingPage;
+
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
