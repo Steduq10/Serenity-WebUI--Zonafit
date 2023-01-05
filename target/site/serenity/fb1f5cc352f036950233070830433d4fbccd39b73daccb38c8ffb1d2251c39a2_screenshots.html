@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-01-2023 12:47</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-01-2023 14:02</span>
     <br style="clear:left"/>
 </div>
 
@@ -189,9 +189,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Pedido no completado
+                                <span class="error-color">Pedido no completado
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -212,92 +212,59 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Stale element reference exception: stale element reference: element is not attached to the page document</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.StaleElementReferenceException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>interactions.Click.performAs(Click.java:20)<br />tasks.CarritoComprasTask.performAs(CarritoComprasTask.java:27)<br />stepdefinitions.pedidofallido.PedidoFallidoSteps.vaA_LaSeccionDeOfertasYAgregaProductosAlCarrito(PedidoFallidoSteps.java:42)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource17902767630074626689.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" 1: Pedido no completado ({documento=1234567890, email=, nombre=Prueba, apellido=Serenity, departamento=Antioquia, municipio=Medellin - 050001, direccion=Cra 101 # 24-78, complemento=Castilla, celular=3004784358, notas=Zonabit.co es lo mejor})" width="1366"/>
                 <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Dado a que el usuario esta en el menu principal de la pagina" width="1366"/>
                 <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Steven open landing page" width="1366"/>
                 <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Steven opens the Landing page" width="1366"/>
-                <img src="cb3a8ca97f2b46758b504449cd74d0f0a89fe4a0d79435df8a6a45eef354ccc2.png" title=" Steven opens the Landing page (completed)" width="1366"/>
-                <img src="cb3a8ca97f2b46758b504449cd74d0f0a89fe4a0d79435df8a6a45eef354ccc2.png" title=" Steven open landing page (completed)" width="1366"/>
-                <img src="2924fee4741872b3deb9077709aef396711399d61dfb31e0c168cd12bc726b74.png" title=" Dado a que el usuario esta en el menu principal de la pagina (completed)" width="1366"/>
-                <img src="2924fee4741872b3deb9077709aef396711399d61dfb31e0c168cd12bc726b74.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito" width="1366"/>
-                <img src="2924fee4741872b3deb9077709aef396711399d61dfb31e0c168cd12bc726b74.png" title=" Steven carrito compras task" width="1366"/>
-                <img src="436d491acba4c97c0a3ac625cbc6dde592e05614feee483a2018c25b2a53599b.png" title=" Steven clicks on OFERTAS" width="1366"/>
-                <img src="e81a7431fd790af246ecfadd1ae55c4faec0ce19e91cc0fbfe6f7cb95836c4e8.png" title=" Steven clicks on OFERTAS (completed)" width="1366"/>
-                <img src="bf15ef66543139eaba49247a20e7d121e891ed8dc27eee1e37c504bb893f760d.png" title=" Steven carrito compras task (completed)" width="1366"/>
-                <img src="bf15ef66543139eaba49247a20e7d121e891ed8dc27eee1e37c504bb893f760d.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito (completed)" width="1366"/>
-                <img src="bf15ef66543139eaba49247a20e7d121e891ed8dc27eee1e37c504bb893f760d.png" title=" Y diligencio el formulario de pago y envio con un formato de email no valido
-| documento | 1234567890 |
-| email |  |
-| nombre | Prueba |
-| apellido | Serenity |
-| departamento | Antioquia |
-| municipio | Medellin - 050001 |
-| direccion | Cra 101 # 24-78 |
-| complemento | Castilla |
-| celular | 3004784358 |
-| notas | Zonabit.co es lo mejor |" width="1366"/>
-                <img src="992a467e465e53e8f39d49a68d3d6b3dc13ba4532691c3293726ee98f1adf908.png" title=" Steven fill form" width="1366"/>
-                <img src="9784b104b725f2c5a1f5db43a6cb8d0a3738c665b2c7bdbf7f0293b734f86e4e.png" title=" Steven clears field DIRECCION1" width="1366"/>
-                <img src="e12f9531d9c01e0af419e7d9dd2d5f3d25fbdb47882f66a8ea278aa32955065c.png" title=" Steven clears field DIRECCION1 (completed)" width="1366"/>
-                <img src="e12f9531d9c01e0af419e7d9dd2d5f3d25fbdb47882f66a8ea278aa32955065c.png" title=" Steven enters 'Cra 101 # 24-78' into DIRECCION1" width="1366"/>
-                <img src="fd2f6c5178c15874dbb7ab6703ad06d6ce3e269ffb01ba8459e18679d6d346b9.png" title=" Steven enters 'Cra 101 # 24-78' into DIRECCION1 (completed)" width="1366"/>
-                <img src="ee2ebd5c8de7648216a351a886919f648b77ad43b8a014662733498291a6db11.png" title=" Steven clears field DEPARTAMENTO" width="1366"/>
-                <img src="9f7379eb891bebaadbe64e446b96e0edeb1d5862006ab28def65d814995fe674.png" title=" Steven clears field DEPARTAMENTO (completed)" width="1366"/>
-                <img src="9f7379eb891bebaadbe64e446b96e0edeb1d5862006ab28def65d814995fe674.png" title=" Steven enters 'Antioquia' into DEPARTAMENTO" width="1366"/>
-                <img src="7572c0d6f1a373b28192666e4377db2e8d165591a894b27ff6f4b255e10512a9.png" title=" Steven enters 'Antioquia' into DEPARTAMENTO (completed)" width="1366"/>
-                <img src="ff5d852caa40fc5e4b23d4d86eab76c16d3674f94be589ae4e452cfcc8fa5fc7.png" title=" Steven clears field MUNICIPIO" width="1366"/>
-                <img src="866ec1e78e8615b3a4fb4aa1b3e457d4fe6d29fde227bf9840923eeccaf07013.png" title=" Steven clears field MUNICIPIO (completed)" width="1366"/>
-                <img src="866ec1e78e8615b3a4fb4aa1b3e457d4fe6d29fde227bf9840923eeccaf07013.png" title=" Steven enters 'Medellin - 050001' into MUNICIPIO" width="1366"/>
-                <img src="4c8813afd5deaab030c367200a1760f5e9f24a9132e039b4b575a82e0a92887e.png" title=" Steven enters 'Medellin - 050001' into MUNICIPIO (completed)" width="1366"/>
-                <img src="f7498a5131d293ce82f682f20f05adda8fd87c0d48486fe482da38469473ad03.png" title=" Steven clears field DIRECCION2" width="1366"/>
-                <img src="c36c56e2945b11968bdcd3b65d7e1e79046cb74f2d9a2f914905a7b68cfe3055.png" title=" Steven clears field DIRECCION2 (completed)" width="1366"/>
-                <img src="c36c56e2945b11968bdcd3b65d7e1e79046cb74f2d9a2f914905a7b68cfe3055.png" title=" Steven enters 'Castilla' into DIRECCION2" width="1366"/>
-                <img src="2370de313b75f8b6f5311a5eb5bf977e583f33bf585589d6dd867f38e5158291.png" title=" Steven enters 'Castilla' into DIRECCION2 (completed)" width="1366"/>
-                <img src="4af0017a0be9ec815e55cd5d58c1bfadf09b1c2fed6a61526f400f8fbddf29ab.png" title=" Steven clears field N&Uacute;MERO DOCUMENTO" width="1366"/>
-                <img src="cf9a9b28bad8a384eb64e735f45ca080e4500e2749843626a4b54bbc7bcdd3f7.png" title=" Steven clears field N&Uacute;MERO DOCUMENTO (completed)" width="1366"/>
-                <img src="cf9a9b28bad8a384eb64e735f45ca080e4500e2749843626a4b54bbc7bcdd3f7.png" title=" Steven enters '1234567890' into N&Uacute;MERO DOCUMENTO" width="1366"/>
-                <img src="703a44f84413fca31038ed6247544746e585aff4393cd552fa181bdcc372f328.png" title=" Steven enters '1234567890' into N&Uacute;MERO DOCUMENTO (completed)" width="1366"/>
-                <img src="b349cbe29399ccb90597f9322c5db7848c58965bd70f9ac8d3cebb1fc012b550.png" title=" Steven clears field EMAIL" width="1366"/>
-                <img src="ec7895ac93434cc48c2856265a98530a1034d9f245c83bfd1c6e20c8106ce3cf.png" title=" Steven clears field EMAIL (completed)" width="1366"/>
-                <img src="ec7895ac93434cc48c2856265a98530a1034d9f245c83bfd1c6e20c8106ce3cf.png" title=" Steven enters  into EMAIL" width="1366"/>
-                <img src="ec7895ac93434cc48c2856265a98530a1034d9f245c83bfd1c6e20c8106ce3cf.png" title=" Steven enters  into EMAIL (completed)" width="1366"/>
-                <img src="62f97ed460aadd56d0814b620c9a84ac70db24c3cd03f390857fac5af936a312.png" title=" Steven clears field NOMBRE" width="1366"/>
-                <img src="95a6ef12e2e4502b85327623f3b188fca63ccb12f75c1b4d82ac629650e7c4de.png" title=" Steven clears field NOMBRE (completed)" width="1366"/>
-                <img src="95a6ef12e2e4502b85327623f3b188fca63ccb12f75c1b4d82ac629650e7c4de.png" title=" Steven enters 'Prueba' into NOMBRE" width="1366"/>
-                <img src="1b733731de6e6cbdf7476322abf9e60885a83e3c3512cc91f36d02d179bdad86.png" title=" Steven enters 'Prueba' into NOMBRE (completed)" width="1366"/>
-                <img src="eafec12038f78035b4fdff882f40a2a415058841746c1d3677073edf9661c603.png" title=" Steven clears field APELLIDO" width="1366"/>
-                <img src="0bb94cfc3adfa025f040850fceb5fb284d9b270e6b6d7d7bdcbdf014711f376c.png" title=" Steven clears field APELLIDO (completed)" width="1366"/>
-                <img src="0bb94cfc3adfa025f040850fceb5fb284d9b270e6b6d7d7bdcbdf014711f376c.png" title=" Steven enters 'Serenity' into APELLIDO" width="1366"/>
-                <img src="8725af3dcb47a59c5cd9e7b59cefe387cd451778616971008b57638662ded7df.png" title=" Steven enters 'Serenity' into APELLIDO (completed)" width="1366"/>
-                <img src="6e6b47c6bd08d13a80e5cdb5cb3d28131f11e9c5a78a8b32dc87e04916f0a9ae.png" title=" Steven clears field CELULAR" width="1366"/>
-                <img src="a5437f52c30a180d6a66d75fdbf4e2e34967cc0ea90e2402a48eb4f380eb2bb1.png" title=" Steven clears field CELULAR (completed)" width="1366"/>
-                <img src="a5437f52c30a180d6a66d75fdbf4e2e34967cc0ea90e2402a48eb4f380eb2bb1.png" title=" Steven enters '3004784358' into CELULAR" width="1366"/>
-                <img src="40b2e8b00e72a09690484f274a12a757f6e1111abadc954b557493f1269d50b9.png" title=" Steven enters '3004784358' into CELULAR (completed)" width="1366"/>
-                <img src="1651e6a3725a0336f0d8f9ee63ccb71cf17ca434240d62cff345517258bac58c.png" title=" Steven clears field NOTAS" width="1366"/>
-                <img src="f76e6589b46de9b590bf0f50b46f728679c715bde1e455dd9c9f5fffc43fc019.png" title=" Steven clears field NOTAS (completed)" width="1366"/>
-                <img src="f76e6589b46de9b590bf0f50b46f728679c715bde1e455dd9c9f5fffc43fc019.png" title=" Steven enters 'Zonabit.co es lo mejor' into NOTAS" width="1366"/>
-                <img src="2a435872d4511dafdcd107e0dddea0c65b66d6fbe0f461ef9d268e77002b941e.png" title=" Steven enters 'Zonabit.co es lo mejor' into NOTAS (completed)" width="1366"/>
-                <img src="8b36339f0dc4167cd784c54da0f5e1407fdb91d46818ef6bbea3254caaefbb13.png" title=" Steven clicks on TERMINOS" width="1366"/>
-                <img src="73a5224d8ffd2bbc8c680129172a9243c2eeeefc83ff36e332c20e3c5eb0a67b.png" title=" Steven clicks on TERMINOS (completed)" width="1366"/>
-                <img src="81120724410d5d09358438400b4c30b6ffa4b0e94eddbd507fd8be6a21e056ad.png" title=" Steven clicks on ORDEN" width="1366"/>
-                <img src="8b938b5cf44595ce9848b86fcd3a70fad3ad37adc514cb9e569e43a4bf52671f.png" title=" Steven clicks on ORDEN (completed)" width="1366"/>
-                <img src="8b938b5cf44595ce9848b86fcd3a70fad3ad37adc514cb9e569e43a4bf52671f.png" title=" Steven fill form (completed)" width="1366"/>
-                <img src="8b938b5cf44595ce9848b86fcd3a70fad3ad37adc514cb9e569e43a4bf52671f.png" title=" Y diligencio el formulario de pago y envio con un formato de email no valido
-| documento | 1234567890 |
-| email |  |
-| nombre | Prueba |
-| apellido | Serenity |
-| departamento | Antioquia |
-| municipio | Medellin - 050001 |
-| direccion | Cra 101 # 24-78 |
-| complemento | Castilla |
-| celular | 3004784358 |
-| notas | Zonabit.co es lo mejor | (completed)" width="1366"/>
-                <img src="8b938b5cf44595ce9848b86fcd3a70fad3ad37adc514cb9e569e43a4bf52671f.png" title=" Entonces el usuario ve que su pedido no se completa hasta que corriga el error" width="1366"/>
-                <img src="98f80ebda0d5708f326abc623077586bb2e344ef51aeee977e032fb81f2e4ee9.png" title=" Entonces el usuario ve que su pedido no se completa hasta que corriga el error (completed)" width="1366"/>
-                <img src="98f80ebda0d5708f326abc623077586bb2e344ef51aeee977e032fb81f2e4ee9.png" title=" 1: Pedido no completado ({documento=1234567890, email=, nombre=Prueba, apellido=Serenity, departamento=Antioquia, municipio=Medellin - 050001, direccion=Cra 101 # 24-78, complemento=Castilla, celular=3004784358, notas=Zonabit.co es lo mejor}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="bcdcea09865e5d027bcb3b15ee0720e05bfc49591872aab4dbe91ec4e58d4acd.png" title=" Steven opens the Landing page (completed)" width="1366"/>
+                <img src="bcdcea09865e5d027bcb3b15ee0720e05bfc49591872aab4dbe91ec4e58d4acd.png" title=" Steven open landing page (completed)" width="1366"/>
+                <img src="bcdcea09865e5d027bcb3b15ee0720e05bfc49591872aab4dbe91ec4e58d4acd.png" title=" Dado a que el usuario esta en el menu principal de la pagina (completed)" width="1366"/>
+                <img src="bcdcea09865e5d027bcb3b15ee0720e05bfc49591872aab4dbe91ec4e58d4acd.png" title=" Cuando va a la seccion de ofertas y agrega productos al carrito" width="1366"/>
+                <img src="9649a977e84285e4f3d14d8191fe2206d4328722e4ffcb2efe78b896e96694ee.png" title=" Steven carrito compras task" width="1366"/>
+                <img src="6ad24cd5176fc78ad0585c6e2f4e234f152600a94f695c3b04a99ebdfe8068ef.png" title=" Steven clicks on OFERTAS" width="1366"/>
+                <img src="b8aea20fee4adebc1cb5861bde41680521ce393178bf4ca7dc315d8b21c6b8b8.png" title=" Steven clicks on OFERTAS (completed)" width="1366"/>
+                <img src="d3c534fd8a5d880dc63996021a4188dea18844a4e340eec01402301e03c9636d.png" title=" Steven carrito compras task (completed): <span class='error-color'>ERROR</span>" width="1366"/>
             </div>
         </div>
 

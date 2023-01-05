@@ -6,24 +6,16 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
-import org.checkerframework.checker.units.qual.C;
-import org.hamcrest.CoreMatchers;
 import questions.MensajeAlerta;
-import questions.PedidoQuestions;
 import setup.SetUp;
-import stepdefinitions.pedido.PedidoSteps;
-import tasks.FillForm;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static questions.FillFormQuestions.fillFormQuestions;
 import static tasks.CarritoComprasTask.carritoCompras;
 import static tasks.FillForm.fillForm;
 import static tasks.OpenLandingPage.openLandingPage;
-import static tasks.PedidoTask.pedidoTask;
+
 
 public class PedidoFallidoSteps extends SetUp {
     private static final Logger LOGGER = Logger.getLogger(PedidoFallidoSteps.class);
@@ -87,14 +79,6 @@ public class PedidoFallidoSteps extends SetUp {
     @Entonces("el usuario ve que su pedido no se completa hasta que corriga el error")
     public void elUsuarioVeQueSuPedidoNoSeCompletaHastaQueCorrigaElError() {
         try{
-           /* theActorInTheSpotlight()
-                    .should(
-                            seeThat(
-                                    fillFormQuestions().llenadoConDocumento(dataTable.row(0).get(1))
-                                            .yConEmail(dataTable.row(1).get(1))
-                                            .is(), CoreMatchers.equalTo(false)
-                            )
-                    );*/
             theActorInTheSpotlight().asksFor(MensajeAlerta.mensajeAlerta()).equals(true);
             LOGGER.info("El usuario ve un mensaje de alerta indicando que el correo electronico no es válido");
         }catch (Exception e){

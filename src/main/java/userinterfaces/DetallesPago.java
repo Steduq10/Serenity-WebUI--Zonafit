@@ -12,39 +12,6 @@ import java.util.List;
 public class DetallesPago extends PageObject {
 
 
-
-  /*  By dropdownList_Departamento = By.xpath("//*[@id=\"billing_state_field\"]/span/span");
-    By dropdownList_Municipio = By.xpath("//*[@id=\"billing_city_field\"]/span");
-
-    public DetallesPago(WebDriver driver){
-        super(driver);
-    }
-    protected static String getText(WebElement element) {
-            return element.getText();
-    }
-
-    public void selectDropDownList_Departamento(String departamento){
-        WebElement dropdownList = getDriver().findElement(dropdownList_Departamento);
-        List<WebElement> opciones =dropdownList.findElements(By.xpath("//li[@role=\"option\"]"));
-        for (int i=0; i < opciones.size(); i++){
-            if(getText(opciones.get(i)).equals(departamento)){
-                clickOn(opciones.get(i));
-            }
-        }
-
-    }*/
-
-  /*  public static List<Target> listaDepartamentos(){
-        int optionSize = Target.the("Lista Departamentos")
-                .located(By.xpath("//*[@id=\\\"billing_state_field\\\"]/span/span"))
-                .resolveAllFor(new Actor("Steven")).size();
-        List<Target> listaDepartamento = null;
-        for (int i =0; i< optionSize; i++){
-            listaDepartamento.add(Target.the("elemento: "+ i).located())
-        }
-    }*/
-
-
     public static final Target OFERTAS = Target
             .the("OFERTAS")
             .located(By.xpath("//a[@href=\"https://zonafit.co/categoria-producto/ofertas/\"]"));
@@ -74,32 +41,27 @@ public class DetallesPago extends PageObject {
 
     public static final Target OPCIONDEPARTAMENTO = Target
             .the("OPCIONDEPARTAMENTO")
-            //.located(By.xpath("//*[@id=\"billing_state_field\"] //span[@class=\"select2-selection__arrow\"]"));
             .located(By.xpath("//*[@id=\"billing_state_field\"]/span/span"));
     public static final Target DEPARTAMENTO = Target
             .the("DEPARTAMENTO")
             .located(By.xpath("//input[@class=\"select2-search__field\"]"));
-            //.located(By.xpath("//*[@id=\"billing_state_field\"] //span[@class=\"select2-selection__arrow\"]"));
-            //.located(By.xpath("/html/body/span/span/span[1]/input"));
+
 
     public static final Target CORRECTODEPARTAMENTO = Target
             .the("CORRECTODEPARTAMENTO")
-            //.located(By.xpath("//li[@class=\"select2-results__option select2-results__option--highlighted\"]"));
             .located(By.xpath("//li[@class=\"select2-results__option select2-results__option--highlighted\"]"));
 
     public static final Target OPCIONMUNICIPIO = Target
             .the("OPCIONMUNICIPIO")
-            //.located(By.xpath("//*[@id=\"billing_city_field\"] //span[@class=\"select2-selection__arrow\"]"));
             .located(By.xpath("//*[@id=\"billing_city_field\"]/span"));
 
     public static final Target MUNICIPIO = Target
             .the("MUNICIPIO")
             .located(By.xpath("//input[@class=\"select2-search__field\"]"));
-            //.located(By.xpath("/html/body/span/span/span[1]/input"));
+
 
     public static final Target CORRECTOMUNICIPIO = Target
             .the("CORRECTOMUNICIPIO")
-            //.located(By.xpath("//li[@class=\"select2-results__option select2-results__option--highlighted\"]"));
             .located(By.xpath("//li[@class=\"select2-results__option select2-results__option--highlighted\"]"));
 
     public static final Target DIRECCION1 = Target

@@ -6,15 +6,13 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.ensure.Ensure;
+
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
-import org.hamcrest.CoreMatchers;
+
 import questions.PedidoQuestions;
 import setup.SetUp;
-import stepdefinitions.pedido.PedidoSteps;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static tasks.CarritoComprasTask.carritoCompras;
 import static tasks.FillForm.fillForm;

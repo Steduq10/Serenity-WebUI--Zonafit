@@ -18,6 +18,7 @@ public class MensajeAlerta implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         return (MENSAJEALERTA.resolveFor(actor).isVisible()
+       // MENSAJEALERTA.resolveFor(actor).containsText("")
         );
     }
 
