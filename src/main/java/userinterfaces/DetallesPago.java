@@ -132,4 +132,8 @@ public class DetallesPago extends PageObject {
             //.located(By.xpath("button[@id=\"place_order\"]"));
 
 
+    public static final Target MENSAJEALERTA = Target
+            .the("MENSAJEALERTA")
+            .located(By.xpath("//div[@class=\"message-container container alert-color medium-text-center\"]"));
+
 }

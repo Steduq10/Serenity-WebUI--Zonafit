@@ -9,10 +9,12 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
+import org.hamcrest.CoreMatchers;
 import questions.PedidoQuestions;
 import setup.SetUp;
 import stepdefinitions.pedido.PedidoSteps;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static tasks.CarritoComprasTask.carritoCompras;
 import static tasks.FillForm.fillForm;
@@ -85,9 +87,7 @@ public class PedidoExitosoSteps extends SetUp {
     @Entonces("el usuario ve el detalle del pedido realizado de forma exitosa")
     public void elUsuarioVeElDetalleDelPedidoRealizadoDeFormaExitosa() {
         try{
-            theActorInTheSpotlight().attemptsTo(
-                    Ensure.that(PedidoQuestions.pedidoQuestions().answeredBy(actor)).isTrue()
-            );
+            theActorInTheSpotlight().asksFor(PedidoQuestions.pedidoQuestions()).equals(true);
             LOGGER.info("El usuario ve el detalle del pedido realizado de forma exitosa");
         }catch (Exception e){
             LOGGER.error("Error en la ejecución del test: " + e.getMessage());

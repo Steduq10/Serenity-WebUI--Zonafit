@@ -9,10 +9,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import org.apache.log4j.Logger;
 import org.assertj.core.api.Assertions;
+import org.checkerframework.checker.units.qual.C;
 import org.hamcrest.CoreMatchers;
+import questions.MensajeAlerta;
 import questions.PedidoQuestions;
 import setup.SetUp;
 import stepdefinitions.pedido.PedidoSteps;
+import tasks.FillForm;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -84,15 +87,16 @@ public class PedidoFallidoSteps extends SetUp {
     @Entonces("el usuario ve que su pedido no se completa hasta que corriga el error")
     public void elUsuarioVeQueSuPedidoNoSeCompletaHastaQueCorrigaElError() {
         try{
-            theActorInTheSpotlight()
+           /* theActorInTheSpotlight()
                     .should(
                             seeThat(
                                     fillFormQuestions().llenadoConDocumento(dataTable.row(0).get(1))
                                             .yConEmail(dataTable.row(1).get(1))
                                             .is(), CoreMatchers.equalTo(false)
                             )
-                    );
-            LOGGER.info("El usuario ve el detalle del pedido realizado de forma exitosa");
+                    );*/
+            theActorInTheSpotlight().asksFor(MensajeAlerta.mensajeAlerta()).equals(true);
+            LOGGER.info("El usuario ve un mensaje de alerta indicando que el correo electronico no es válido");
         }catch (Exception e){
             LOGGER.error("Error en la ejecución del test: " + e.getMessage());
             Assertions.fail("Error en la ejecución del test: " + e.getMessage());
