@@ -34,6 +34,8 @@ public class CarritoComprasTask implements Task {
                 Scroll.scrollTo(ACERCADE),
                 Scroll.scrollTo(OFERTAS),
                 Scroll.scrollTo(ACERCADE),
+                Scroll.scrollTo(OFERTAS),
+                Scroll.scrollTo(ACERCADE),
 
 
 

@@ -17,7 +17,7 @@ public class CarritoCompras extends PageObject {
     public static String numero(int index){
         List<String> productos = new ArrayList<>();
 
-        for (int i =1; i < 17; i ++){
+        for (int i =1; i < 10; i ++){
             String numero = String.valueOf(i);
             productos.add(numero);
 

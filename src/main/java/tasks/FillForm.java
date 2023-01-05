@@ -81,17 +81,6 @@ public class FillForm implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
 
-               // Scroll.to(OFERTAS),
-                //Click.clickOn(OFERTAS),
-                //Click.clickOn(OFERTAS),
-               // DoubleClick.on(OFERTAS),
-
-               // Scroll.to(PRODUCTO_01),
-              //  Click.clickOn(PRODUCTO_01),
-
-                Scroll.to(FINALIZAR),
-              //  Click.clickOn(FINALIZAR),
-
 
                 Scroll.to(DIRECCION1),
                 Clear.field(DIRECCION1),
@@ -99,23 +88,21 @@ public class FillForm implements Task {
 
                 Scroll.to(OPCIONDEPARTAMENTO),
                 MoveMouse.to(OPCIONDEPARTAMENTO).andThen(actions -> actions.click()),
-                //Click.clickOn(OPCIONDEPARTAMENTO),
-                //Click.clickOn(DEPARTAMENTO),
+
                 MoveMouse.to(DEPARTAMENTO).andThen(actions -> actions.click()),
                 Clear.field(DEPARTAMENTO),
                 Enter.theValue(departamento).into(DEPARTAMENTO),
-                //Click.clickOn(CORRECTODEPARTAMENTO),
+
                 MoveMouse.to(CORRECTODEPARTAMENTO).andThen(actions -> actions.click()),
 
 
                 Scroll.to(OPCIONMUNICIPIO),
                 MoveMouse.to(OPCIONMUNICIPIO).andThen(actions -> actions.click()),
-                //Click.clickOn(OPCIONMUNICIPIO),
-                // Click.clickOn(MUNICIPIO),
+
                 MoveMouse.to(MUNICIPIO).andThen(actions -> actions.click()),
                 Clear.field(MUNICIPIO),
                 Enter.theValue(municipio).into(MUNICIPIO),
-                //Click.clickOn(CORRECTOMUNICIPIO),
+
                 MoveMouse.to(CORRECTOMUNICIPIO).andThen(actions -> actions.click()),
 
 
@@ -155,11 +142,9 @@ public class FillForm implements Task {
                // MoveMouse.to(PAGOBALOTO).andThen(actions -> actions.click()),
 
                 Scroll.to(TERMINOS),
-                //MoveMouse.to(TERMINOS).andThen(actions -> actions.click()),
                 net.serenitybdd.screenplay.actions.Click.on(TERMINOS),
 
                 scrollTo(ORDEN),
-                //MoveMouse.to(ORDEN).andThen(actions -> actions.click()),
                 net.serenitybdd.screenplay.actions.Click.on(ORDEN)
         );
     }
