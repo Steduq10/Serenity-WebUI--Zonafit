@@ -9,18 +9,18 @@ public class PedidoQuestions implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         return (
-                DESCRIPCIONPRODUCTO.resolveFor(actor).isDisplayed()
-                &&PRECIOPRODUCTO.resolveFor(actor).isDisplayed()
-                        &&SUBTOTAL.resolveFor(actor).isDisplayed()
-                        &&SUBTOTALVALOR.resolveFor(actor).isDisplayed()
-                        &&DESCUENTO.resolveFor(actor).isDisplayed()
-                        &&DESCUENTOVALOR.resolveFor(actor).isDisplayed()
-                        &&ENVIO.resolveFor(actor).isDisplayed()
-                        &&ENVIOVALOR.resolveFor(actor).isDisplayed()
-                        &&METODOPAGO.resolveFor(actor).isDisplayed()
-                        &&METODOPAGOVALOR.resolveFor(actor).isDisplayed()
-                        &&TOTAL.resolveFor(actor).isDisplayed()
-                        &&TOTALVALOR.resolveFor(actor).isDisplayed()
+                DESCRIPCIONPRODUCTO.resolveFor(actor).isPresent()
+                &&PRECIOPRODUCTO.resolveFor(actor).isPresent()
+                        &&SUBTOTAL.resolveFor(actor).isPresent()
+                        &&SUBTOTALVALOR.resolveFor(actor).isPresent()
+                        &&DESCUENTO.resolveFor(actor).isPresent()
+                        &&DESCUENTOVALOR.resolveFor(actor).isPresent()
+                        &&ENVIO.resolveFor(actor).isPresent()
+                        &&ENVIOVALOR.resolveFor(actor).isPresent()
+                        &&METODOPAGO.resolveFor(actor).isPresent()
+                        &&METODOPAGOVALOR.resolveFor(actor).isPresent()
+                        &&TOTAL.resolveFor(actor).isPresent()
+                        &&TOTALVALOR.resolveFor(actor).isPresent()
                 );
     }
     public static PedidoQuestions pedidoQuestions(){

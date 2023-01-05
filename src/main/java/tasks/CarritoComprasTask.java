@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import userinterfaces.CarritoCompras;
 
 import static userinterfaces.CarritoCompras.*;
+import static userinterfaces.DetallesPago.FINALIZAR;
 
 public class CarritoComprasTask implements Task {
 
@@ -49,8 +50,11 @@ public class CarritoComprasTask implements Task {
                 Scroll.scrollTo(PRODUCTO_04),
                 Click.clickOn(PRODUCTO_04),
 
-                Scroll.scrollTo(CARRITO),
-                Click.clickOn(CARRITO)
+                //Scroll.scrollTo(CARRITO),
+                //Click.clickOn(CARRITO)
+
+                Scroll.scrollTo(FINALIZAR),
+                Click.clickOn(FINALIZAR)
         );
     }
     public static CarritoComprasTask carritoCompras(){

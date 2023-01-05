@@ -125,9 +125,11 @@ public class DetallesPago extends PageObject {
     public static final Target TERMINOS = Target
             .the("TERMINOS")
             .located(By.id("terms"));
-
+            //.located(By.xpath("//input[@name=\"terms-field\"]"));
     public static final Target ORDEN = Target
             .the("ORDEN")
             .located(By.id("place_order"));
+            //.located(By.xpath("button[@id=\"place_order\"]"));
+
 
 }

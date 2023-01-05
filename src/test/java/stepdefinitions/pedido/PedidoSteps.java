@@ -55,7 +55,7 @@ public class PedidoSteps extends SetUp {
     public void ingresaALaZonaDePedidoCompletado() {
         try{
             theActorInTheSpotlight().attemptsTo(
-                    carritoCompras()
+                    pedidoTask()
             );
         }catch (Exception e){
             LOGGER.error("Error en la ejecución del test: " + e.getMessage());

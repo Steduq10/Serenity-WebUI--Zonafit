@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Test Detalle pedido  zonaFit.co" skipped="0" tests="1" time="54.06" timestamp="2023-01-05 11:53:36"><testcase name="Pedido no completado"><error message="null" type="java.lang.AssertionError">null</error><system-err>null&#13;
+stepdefinitions.pedidofallido.PedidoFallidoSteps.elUsuarioVeQueSuPedidoNoSeCompletaHastaQueCorrigaElError(PedidoFallidoSteps.java:88)&#13;
+✽.el usuario ve que su pedido no se completa hasta que corriga el error(file:///C:/Projects/Serenity-ZonaFit/src/test/resources/features/pedidofallido.feature:18)&#13;
+</system-err></testcase></testsuite>
