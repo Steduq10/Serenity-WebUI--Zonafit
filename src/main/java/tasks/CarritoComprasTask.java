@@ -30,7 +30,11 @@ public class CarritoComprasTask implements Task {
                 DoubleClick.on(OFERTAS),
 
                 Scroll.scrollTo(ACERCADE),
+                Scroll.scrollTo(OFERTAS),
                 Scroll.scrollTo(ACERCADE),
+                Scroll.scrollTo(OFERTAS),
+                Scroll.scrollTo(ACERCADE),
+
 
 
                 Scroll.scrollTo(PRODUCTO_01),

@@ -6,9 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class CarritoCompras extends PageObject {
 
@@ -17,8 +15,18 @@ public class CarritoCompras extends PageObject {
 
 
     public static String numero(int index){
+        List<String> productos = new ArrayList<>();
 
-        List<String> productos = Arrays.asList("1","2","3","4");
+        for (int i =1; i < 17; i ++){
+            String numero = String.valueOf(i);
+            productos.add(numero);
+
+        }
+        Collections.shuffle(productos);
+        System.out.println("El tamaño de la lista es: " + productos.size());
+
+       // List<String> productos = Arrays.asList("1","2","3","4");
+
         String xpathArticulo = "(//a[contains(text(),'Añadir al carrito')])[%s]";
         xpathArticulo = String.format(xpathArticulo, productos.get(index));
         System.out.println(xpathArticulo);
@@ -56,7 +64,6 @@ public class CarritoCompras extends PageObject {
 
     public static  Target PRODUCTO_04 = Target
             .the("100% Whey Premium -5 lb Nutrex")
-            //.located(By.xpath("//a[@href=\"?add-to-cart=254614\"]"));
             //.located(By.xpath("(//a[contains(text(),'Añadir al carrito')])[4]"));
             .located(By.xpath(numero(3)));
 
