@@ -23,14 +23,14 @@ public class CarritoCompras extends PageObject {
 
         }
         Collections.shuffle(productos);
-        System.out.println("El tamaño de la lista es: " + productos.size());
+
 
        // List<String> productos = Arrays.asList("1","2","3","4");
 
         String xpathArticulo = "(//a[contains(text(),'Añadir al carrito')])[%s]";
         xpathArticulo = String.format(xpathArticulo, productos.get(index));
         System.out.println(xpathArticulo);
-        System.out.println(productos.get(index));
+       // System.out.println(productos.get(index));
         return xpathArticulo;
     }
     public static final Target ACERCADE = Target
@@ -42,28 +42,24 @@ public class CarritoCompras extends PageObject {
             .the("OFERTAS")
             .located(By.xpath("//a[@href=\"https://zonafit.co/categoria-producto/ofertas/\"]"));
 
-    @FindBy(xpath = "//div[@class='add-to-cart-button']/a[contains(text(),'Añadir al carrito')]")
-    private static List<Target> productos;
 
-
-
-    public static  Target PRODUCTO_01 = Target
-            .the("Mass Tech Extreme 20 lb + Creatine Drive 300 gr + Obsequio")
+    public static final Target PRODUCTO_01 = Target
+            .the("PRODUCTO_01")
             //.located(By.xpath("(//a[contains(text(),'Añadir al carrito')])[1]"));
             .located(By.xpath(numero(0)));
-    public static  Target PRODUCTO_02 =
+    public static final Target PRODUCTO_02 =
             Target
-            .the("Mass Tech Extreme 6 lb + Creatine Drive 300 gr + Obsequio")
+            .the("PRODUCTO_02")
                     //.located(By.xpath("(//a[contains(text(),'Añadir al carrito')])[2]"));
                     .located(By.xpath(numero(1)));
 
-    public static  Target PRODUCTO_03 = Target
-            .the("Megaplex Creatine Power 10 lb + 2 lb + Creatine Pum 120 caps + Tribulus Extreme 100 caps")
+
+    public static final  Target PRODUCTO_03 = Target
+            .the("PRODUCTO_03")
             //.located(By.xpath("(//a[contains(text(),'Añadir al carrito')])[3]"));
             .located(By.xpath(numero(2)));
-
-    public static  Target PRODUCTO_04 = Target
-            .the("100% Whey Premium -5 lb Nutrex")
+    public static final Target PRODUCTO_04 = Target
+            .the("PRODUCTO_04")
             //.located(By.xpath("(//a[contains(text(),'Añadir al carrito')])[4]"));
             .located(By.xpath(numero(3)));
 

@@ -52,11 +52,12 @@ public class CarritoComprasTask implements Task {
                 Scroll.scrollTo(CLOSEBUTTON),
                 Click.clickOn(CLOSEBUTTON),
 
-                Scroll.scrollTo(PRODUCTO_03),
-                Click.clickOn(PRODUCTO_03),
+               // Scroll.scrollTo(PRODUCTO_03),
+               // Click.clickOn(PRODUCTO_03),
 
-                Scroll.scrollTo(CLOSEBUTTON),
-                Click.clickOn(CLOSEBUTTON),
+               // Scroll.scrollTo(CLOSEBUTTON),
+               // Click.clickOn(CLOSEBUTTON),
+
 
                 Scroll.scrollTo(PRODUCTO_04),
                 Click.clickOn(PRODUCTO_04),
